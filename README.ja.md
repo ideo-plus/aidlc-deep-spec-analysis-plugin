@@ -12,9 +12,9 @@
 - **沈黙のギャップを作らない** — すべての義務は「検査済み」「理由付きスキップ」「`unavailable`」のいずれかとして必ず現れ、カバレッジ表が「何を検証し、何を検証しなかったか」を正確に示します。
 - **決定論** — 同一 IR + 同一環境 ⇒ バイト同一のセンサー出力（固定シード・正準ソート・タイムスタンプなし）。バイト一致の conformance テストで担保します。
 - **優雅な劣化** — ソルバーの欠如がステージを止めることはありません。advisory な finding と `/aidlc --doctor` のヒントに落ちます。
-- **検証済み要件に対する refinement（フェーズ③）** — 人間がゲートする明示的な抽象化写像が、各ユニットの設計を検証済み要件 IR に結び付けます：ᾱ 代入した不変条件は静的にも機械の全実行に沿っても成立しなければならず、写像された遷移は要件イベントを模擬し（enabledness + 抽象フレーム付き 1 ステップ模擬）、シナリオは再生され、写像の閉包規則が無言の省略をすべて `mapping-gap` に変えます（[要件: #2](https://github.com/amadeus-dlc/aidlc-deep-spec-analysis-plugin/issues/2)）。
-- **functional design の形式検証（フェーズ②）** — 各ユニットのエンティティ・ビジネスルール・ネイティブ状態機械を設計 IR に形式化し、コンパイルダウン再利用で同じ z3/Quint 機構にかけます：非決定遷移、デッド/冗長ルール、未カバーの状態×トリガセル（人間が宣言する `ignores` 付き）、ステップトレース付きの到達可能な不変条件違反、bounded モードの到達不能状態（[要件: #2](https://github.com/amadeus-dlc/aidlc-deep-spec-analysis-plugin/issues/2)）。
-- **設計成果物の整合性（設計検証拡張フェーズ①）** — ソルバー不要の refcheck センサーが `domain-design`・`contract-design`・`functional-design` の成果物書き込み時に発火し、宙に浮いた参照、非対称・循環依存、幻の FR source、エンティティモデルと食い違う状態機械、設計ステージ間のエンティティドリフトを検出します（[要件: #2](https://github.com/amadeus-dlc/aidlc-deep-spec-analysis-plugin/issues/2)）。
+- **検証済み要件に対する refinement（フェーズ③）** — 人間がゲートする明示的な抽象化写像が、各ユニットの設計を検証済み要件 IR に結び付けます：ᾱ 代入した不変条件は静的にも機械の全実行に沿っても成立しなければならず、写像された遷移は要件イベントを模擬し（enabledness + 抽象フレーム付き 1 ステップ模擬）、シナリオは再生され、写像の閉包規則が無言の省略をすべて `mapping-gap` に変えます（[要件: #2](https://github.com/ideo-plus/aidlc-deep-spec-analysis-plugin/issues/2)）。
+- **functional design の形式検証（フェーズ②）** — 各ユニットのエンティティ・ビジネスルール・ネイティブ状態機械を設計 IR に形式化し、コンパイルダウン再利用で同じ z3/Quint 機構にかけます：非決定遷移、デッド/冗長ルール、未カバーの状態×トリガセル（人間が宣言する `ignores` 付き）、ステップトレース付きの到達可能な不変条件違反、bounded モードの到達不能状態（[要件: #2](https://github.com/ideo-plus/aidlc-deep-spec-analysis-plugin/issues/2)）。
+- **設計成果物の整合性（設計検証拡張フェーズ①）** — ソルバー不要の refcheck センサーが `domain-design`・`contract-design`・`functional-design` の成果物書き込み時に発火し、宙に浮いた参照、非対称・循環依存、幻の FR source、エンティティモデルと食い違う状態機械、設計ステージ間のエンティティドリフトを検出します（[要件: #2](https://github.com/ideo-plus/aidlc-deep-spec-analysis-plugin/issues/2)）。
 
 ## クイックスタート
 
@@ -94,7 +94,7 @@ codex plugin add aidlc-deep-spec-analysis@aidlc-plugins   # 初回のみフッ�
 開発する場合は、リポジトリを clone して dev 依存を導入します：
 
 ```sh
-git clone https://github.com/amadeus-dlc/aidlc-deep-spec-analysis-plugin.git
+git clone https://github.com/ideo-plus/aidlc-deep-spec-analysis-plugin.git
 cd aidlc-deep-spec-analysis-plugin
 git clone --depth 1 --branch v2.8.1 https://github.com/awslabs/aidlc-workflows.git .cache/aidlc-workflows
 bun .cache/aidlc-workflows/scripts/package.ts claude
@@ -130,7 +130,7 @@ bun ../.cache/aidlc-workflows/core/tools/aidlc-plugin-test.ts . --install <aidlc
 
 ## ヘルプ
 
-- Issues: <https://github.com/amadeus-dlc/aidlc-deep-spec-analysis-plugin/issues>
+- Issues: <https://github.com/ideo-plus/aidlc-deep-spec-analysis-plugin/issues>
 
 ## ライセンス
 

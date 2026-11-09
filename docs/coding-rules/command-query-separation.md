@@ -1,6 +1,6 @@
 # CQS — 状態変更と照会を分ける
 
-移植元: [amadeus-ngの同名規則](https://github.com/amadeus-dlc/amadeus-ng/blob/537c4e56a838a4cb28f6564d4c0add1d4adfe915/aidlc/spaces/default/knowledge/aidlc-shared/coding-rules/command-query-separation.md)。2026-09-05にTypeScriptと当該の裁定へ適用し直した版。
+移植元: [amadeus-ngの同名規則](https://github.com/ideo-plus/amadeus-ng/blob/537c4e56a838a4cb28f6564d4c0add1d4adfe915/aidlc/spaces/default/knowledge/aidlc-shared/coding-rules/command-query-separation.md)。2026-09-05にTypeScriptと当該の裁定へ適用し直した版。
 
 **採用方針**: CQSは採用する（2026-09-05、ユーザー確認）。個々のメソッドの責務についての規則である。
 

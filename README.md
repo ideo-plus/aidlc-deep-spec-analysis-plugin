@@ -12,9 +12,9 @@ This is the development workspace. The plugin itself lives in [`deep-spec-analys
 - **No silent gaps** — every obligation is either checked, skipped with a reason, or reported `unavailable`; the coverage table shows exactly what was and wasn't verified.
 - **Deterministic** — same IR + same environment ⇒ byte-identical sensor output (fixed seeds, canonical sorting, no timestamps), enforced by byte-exact conformance tests.
 - **Graceful degradation** — missing solvers never block the stage; they become advisory findings and `/aidlc --doctor` hints.
-- **Refinement against the verified requirements (phase 3)** — an explicit, human-gated abstraction map ties each unit's design back to the verified requirements IR: alpha-substituted invariants must hold statically and along every machine execution, mapped transitions must simulate the requirements events (enabledness + one-step simulation with an abstract frame), scenarios replay, and the map's closure rule turns every unstated omission into a `mapping-gap` ([requirements: #2](https://github.com/amadeus-dlc/aidlc-deep-spec-analysis-plugin/issues/2)).
-- **Functional-design formal verification (phase 2)** — each unit's entities, business rules, and native state machines formalize into a design IR and run through the same z3/Quint machinery via compile-down reuse: nondeterministic transitions, dead and redundant rules, uncovered state x trigger cells (with human-declared `ignores`), reachable invariant violations with step traces, and bounded-mode unreachable states ([requirements: #2](https://github.com/amadeus-dlc/aidlc-deep-spec-analysis-plugin/issues/2)).
-- **Design-artifact integrity (phase 1 of the design-verification extension)** — solver-free refcheck sensors fire while `domain-design`, `contract-design`, and `functional-design` write their artifacts, catching dangling references, asymmetric or cyclic dependencies, phantom FR sources, state machines that disagree with the entity model, and entity drift between design stages ([requirements: #2](https://github.com/amadeus-dlc/aidlc-deep-spec-analysis-plugin/issues/2)).
+- **Refinement against the verified requirements (phase 3)** — an explicit, human-gated abstraction map ties each unit's design back to the verified requirements IR: alpha-substituted invariants must hold statically and along every machine execution, mapped transitions must simulate the requirements events (enabledness + one-step simulation with an abstract frame), scenarios replay, and the map's closure rule turns every unstated omission into a `mapping-gap` ([requirements: #2](https://github.com/ideo-plus/aidlc-deep-spec-analysis-plugin/issues/2)).
+- **Functional-design formal verification (phase 2)** — each unit's entities, business rules, and native state machines formalize into a design IR and run through the same z3/Quint machinery via compile-down reuse: nondeterministic transitions, dead and redundant rules, uncovered state x trigger cells (with human-declared `ignores`), reachable invariant violations with step traces, and bounded-mode unreachable states ([requirements: #2](https://github.com/ideo-plus/aidlc-deep-spec-analysis-plugin/issues/2)).
+- **Design-artifact integrity (phase 1 of the design-verification extension)** — solver-free refcheck sensors fire while `domain-design`, `contract-design`, and `functional-design` write their artifacts, catching dangling references, asymmetric or cyclic dependencies, phantom FR sources, state machines that disagree with the entity model, and entity drift between design stages ([requirements: #2](https://github.com/ideo-plus/aidlc-deep-spec-analysis-plugin/issues/2)).
 
 ## Quickstart
 
@@ -105,7 +105,7 @@ On the next session start the plugin's SessionStart hook composes into `.claude/
 For development, clone the repository and install its dev dependencies:
 
 ```sh
-git clone https://github.com/amadeus-dlc/aidlc-deep-spec-analysis-plugin.git
+git clone https://github.com/ideo-plus/aidlc-deep-spec-analysis-plugin.git
 cd aidlc-deep-spec-analysis-plugin
 git clone --depth 1 --branch v2.8.1 https://github.com/awslabs/aidlc-workflows.git .cache/aidlc-workflows
 bun .cache/aidlc-workflows/scripts/package.ts claude
@@ -141,7 +141,7 @@ bun ../.cache/aidlc-workflows/core/tools/aidlc-plugin-test.ts . --install <aidlc
 
 ## Getting help
 
-- Issues: <https://github.com/amadeus-dlc/aidlc-deep-spec-analysis-plugin/issues>
+- Issues: <https://github.com/ideo-plus/aidlc-deep-spec-analysis-plugin/issues>
 
 ## License
 

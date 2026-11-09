@@ -73,7 +73,7 @@ The manual checks below are automated as `tests/intent-e2e.test.ts` (run by CI o
 
 ## Design decisions of design-verification extension phase 1 (refcheck) (2026-08-29, v0.2.0)
 
-The canonical requirements are [issue #2 (the full requirements definition)](https://github.com/amadeus-dlc/aidlc-deep-spec-analysis-plugin/issues/2) and [issue #3 (phase 1)](https://github.com/amadeus-dlc/aidlc-deep-spec-analysis-plugin/issues/3). Implemented: three solver-free, LLM-free reference-integrity sensors (`deep-spec-refcheck-{domain,contract,functional}`) joined to domain-design / contract-design / functional-design via contributions' `adds.sensors`, the findings contract (contract 2) rectified and extended, and a report-only structural-debt scan added to the doctor. Zero stages added (one arrives in phases 2/3).
+The canonical requirements are [issue #2 (the full requirements definition)](https://github.com/ideo-plus/aidlc-deep-spec-analysis-plugin/issues/2) and [issue #3 (phase 1)](https://github.com/ideo-plus/aidlc-deep-spec-analysis-plugin/issues/3). Implemented: three solver-free, LLM-free reference-integrity sensors (`deep-spec-refcheck-{domain,contract,functional}`) joined to domain-design / contract-design / functional-design via contributions' `adds.sensors`, the findings contract (contract 2) rectified and extended, and a report-only structural-debt scan added to the doctor. Zero stages added (one arrives in phases 2/3).
 
 ### Resolution of the open questions (the Qs assigned to issue #3)
 
@@ -115,7 +115,7 @@ A defect the automated E2E can never hit (it always starts from a fresh tmp tree
 
 ## Design decisions of design-verification extension phase 2 (design IR + standalone SMT/Quint checks) (2026-08-29, v0.3.0)
 
-The canonical requirements are [issue #2](https://github.com/amadeus-dlc/aidlc-deep-spec-analysis-plugin/issues/2) and [issue #4 (phase 2)](https://github.com/amadeus-dlc/aidlc-deep-spec-analysis-plugin/issues/4). Implemented: the design IR (contract 3, `deep-spec-design-ir-schema.json`), the verification stage `deep-spec-analysis-functional-verify` (construction, aggregator, no for_each), the sensor trio `deep-spec-design-{ir-valid,verify-smt,verify-quint}`, and the doctor's per-unit coverage scan.
+The canonical requirements are [issue #2](https://github.com/ideo-plus/aidlc-deep-spec-analysis-plugin/issues/2) and [issue #4 (phase 2)](https://github.com/ideo-plus/aidlc-deep-spec-analysis-plugin/issues/4). Implemented: the design IR (contract 3, `deep-spec-design-ir-schema.json`), the verification stage `deep-spec-analysis-functional-verify` (construction, aggregator, no for_each), the sensor trio `deep-spec-design-{ir-valid,verify-smt,verify-quint}`, and the doctor's per-unit coverage scan.
 
 ### Core architecture: compile-down reuse
 
@@ -160,7 +160,7 @@ Bounded mode only, capped (`AIDLC_DEEP_SPEC_QUINT_UNREACH_CAP`, default 2). For 
 
 ## Design decisions of design-verification extension phase 3 (refinement checks) (2026-08-29, v0.4.0)
 
-The canonical requirements are [issue #2](https://github.com/amadeus-dlc/aidlc-deep-spec-analysis-plugin/issues/2) and [issue #5 (phase 3)](https://github.com/amadeus-dlc/aidlc-deep-spec-analysis-plugin/issues/5). Implemented: the refinement map (contract 4, `deep-spec-refinement-map-schema.json`), `deep-spec-refinement-lib.ts` (map validation, alpha substitution, the SMT query builder, Quint extra invariants), the refinement passes wired into both design backends, the stage's map-authoring step, and the doctor's refinement-stale.
+The canonical requirements are [issue #2](https://github.com/ideo-plus/aidlc-deep-spec-analysis-plugin/issues/2) and [issue #5 (phase 3)](https://github.com/ideo-plus/aidlc-deep-spec-analysis-plugin/issues/5). Implemented: the refinement map (contract 4, `deep-spec-refinement-map-schema.json`), `deep-spec-refinement-lib.ts` (map validation, alpha substitution, the SMT query builder, Quint extra invariants), the refinement passes wired into both design backends, the stage's map-authoring step, and the doctor's refinement-stale.
 
 ### Architecture
 

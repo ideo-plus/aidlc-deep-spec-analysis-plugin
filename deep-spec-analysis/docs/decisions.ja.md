@@ -137,7 +137,7 @@ LLM会話層（形式化・A/Bゲート・レポート）はfixture代替のた�
 
 ## 設計検証拡張フェーズ①（refcheck）の設計判断（2026-08-29、v0.2.0）
 
-要件の正典は [issue #2（要件定義全文）](https://github.com/amadeus-dlc/aidlc-deep-spec-analysis-plugin/issues/2) と [issue #3（フェーズ①）](https://github.com/amadeus-dlc/aidlc-deep-spec-analysis-plugin/issues/3)。実装：ソルバー不要・LLM不要の参照整合センサー3本（`deep-spec-refcheck-{domain,contract,functional}`）を contributions の `adds.sensors` で domain-design / contract-design / functional-design に合流させ、findings 契約（契約2）を是正・拡張し、doctor に report-only 構造負債スキャンを追加した。ステージ追加はゼロ（②③で1本）。
+要件の正典は [issue #2（要件定義全文）](https://github.com/ideo-plus/aidlc-deep-spec-analysis-plugin/issues/2) と [issue #3（フェーズ①）](https://github.com/ideo-plus/aidlc-deep-spec-analysis-plugin/issues/3)。実装：ソルバー不要・LLM不要の参照整合センサー3本（`deep-spec-refcheck-{domain,contract,functional}`）を contributions の `adds.sensors` で domain-design / contract-design / functional-design に合流させ、findings 契約（契約2）を是正・拡張し、doctor に report-only 構造負債スキャンを追加した。ステージ追加はゼロ（②③で1本）。
 
 ### 未解決事項の決着（issue #3 に割り付けた Q）
 
@@ -179,7 +179,7 @@ tmp から作る自動 E2E は常にバニラツリー開始のため踏めな�
 
 ## 設計検証拡張フェーズ②（設計IR + SMT/Quint 単独検査）の設計判断（2026-08-29、v0.3.0）
 
-要件の正典は [issue #2](https://github.com/amadeus-dlc/aidlc-deep-spec-analysis-plugin/issues/2) と [issue #4（フェーズ②）](https://github.com/amadeus-dlc/aidlc-deep-spec-analysis-plugin/issues/4)。実装：設計 IR（契約3、`deep-spec-design-ir-schema.json`）、検証ステージ `deep-spec-analysis-functional-verify`（construction・for_each なし集約型）、センサー trio `deep-spec-design-{ir-valid,verify-smt,verify-quint}`、doctor のユニット単位カバレッジスキャン。
+要件の正典は [issue #2](https://github.com/ideo-plus/aidlc-deep-spec-analysis-plugin/issues/2) と [issue #4（フェーズ②）](https://github.com/ideo-plus/aidlc-deep-spec-analysis-plugin/issues/4)。実装：設計 IR（契約3、`deep-spec-design-ir-schema.json`）、検証ステージ `deep-spec-analysis-functional-verify`（construction・for_each なし集約型）、センサー trio `deep-spec-design-{ir-valid,verify-smt,verify-quint}`、doctor のユニット単位カバレッジスキャン。
 
 ### 中核アーキテクチャ：コンパイルダウン再利用
 
@@ -224,7 +224,7 @@ bounded モード限定・キャップ制（`AIDLC_DEEP_SPEC_QUINT_UNREACH_CAP`�
 
 ## 設計検証拡張フェーズ③（refinement 検査）の設計判断（2026-08-29、v0.4.0）
 
-要件の正典は [issue #2](https://github.com/amadeus-dlc/aidlc-deep-spec-analysis-plugin/issues/2) と [issue #5（フェーズ③）](https://github.com/amadeus-dlc/aidlc-deep-spec-analysis-plugin/issues/5)。実装：精緻化写像（契約4、`deep-spec-refinement-map-schema.json`）、`deep-spec-refinement-lib.ts`（写像検証・ᾱ 代入・SMT クエリビルダ・Quint 追加不変条件）、両設計バックエンドへの refinement パス配線、ステージの写像著述ステップ、doctor の refinement-stale。
+要件の正典は [issue #2](https://github.com/ideo-plus/aidlc-deep-spec-analysis-plugin/issues/2) と [issue #5（フェーズ③）](https://github.com/ideo-plus/aidlc-deep-spec-analysis-plugin/issues/5)。実装：精緻化写像（契約4、`deep-spec-refinement-map-schema.json`）、`deep-spec-refinement-lib.ts`（写像検証・ᾱ 代入・SMT クエリビルダ・Quint 追加不変条件）、両設計バックエンドへの refinement パス配線、ステージの写像著述ステップ、doctor の refinement-stale。
 
 ### アーキテクチャ
 

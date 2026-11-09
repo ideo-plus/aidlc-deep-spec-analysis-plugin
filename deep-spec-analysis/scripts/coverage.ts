@@ -2,7 +2,7 @@
 //
 // scripts/coverage.ts — line coverage ゲート (bun test --coverage の lcov ベース)
 //
-// 参考実装: amadeus-dlc/amadeus-ng の scripts/coverage.sh (cargo-llvm-cov ベース)。
+// 参考実装: ideo-plus/amadeus-ng の scripts/coverage.sh (cargo-llvm-cov ベース)。
 // ゲート判定 (絶対 / 相対) と worktree の扱いを踏襲し、計測だけを Bun に置き換えた。
 //
 // ゲート方針:

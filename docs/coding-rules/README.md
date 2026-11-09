@@ -56,7 +56,7 @@ amadeus-ngの`coding-rules`を、このTypeScriptプロジェクト向けに移�
 ## 移植記録
 
 - 移植日: 2026-09-05。
-- 原本: [amadeus-ng / coding-rules](https://github.com/amadeus-dlc/amadeus-ng/blob/537c4e56a838a4cb28f6564d4c0add1d4adfe915/aidlc/spaces/default/knowledge/aidlc-shared/coding-rules/)。
+- 原本: [amadeus-ng / coding-rules](https://github.com/ideo-plus/amadeus-ng/blob/537c4e56a838a4cb28f6564d4c0add1d4adfe915/aidlc/spaces/default/knowledge/aidlc-shared/coding-rules/)。
 - 原本のコミット: `537c4e56a838a4cb28f6564d4c0add1d4adfe915`。対象ディレクトリに未コミット差分がないことを確認して取り込んだ。
 - 原本24ファイルのうち、READMEと21主題を同名の22ファイルとして移植した。原文の完全複製ではなく、採用範囲と言語・既存裁定を合わせた版である。各ファイルから原文へ辿れる。
 - `cqrs-boundaries.md`は不採用のため除外した。
