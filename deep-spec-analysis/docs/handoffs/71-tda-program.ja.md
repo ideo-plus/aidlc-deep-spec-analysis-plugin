@@ -4,7 +4,7 @@
 
 ## これは何か
 
-`amadeus-dlc/aidlc-deep-spec-analysis-plugin` の issue #71「MECE フェンス」TDA（Tell Don't Ask）プログラム。
+`ideo-plus/aidlc-deep-spec-analysis-plugin` の issue #71「MECE フェンス」TDA（Tell Don't Ask）プログラム。
 domain 層の getter-only データモデル（`IrBackgroundDecl` が発端）を commandable class（private `#` フィールド + private constructor + static `reconstitute`/名前つきファクトリ + 振る舞いメソッド）に反転させ、型の外に逃げたビジネスロジックを型へ移管する。
 進捗の物差しは `deep-spec-analysis/tests/architecture/rules.ts` の `DATA_MODEL_DEBT` 台帳（**縮小専用**。消すことだけ許され、追加・文言変更は禁止）。
 
@@ -138,7 +138,7 @@ domain 層の getter-only データモデル（`IrBackgroundDecl` が発端）�
 - **コミット**: Conventional Commits・英語・叙事スタイル。例: `refactor: design findings and machines own their verdict logic (owner ruling, #71 wave 7)`。attribution/co-author 行なし。
 - **マージ**: squash（件名に `(#番号)` が付く形式がリポジトリ慣例）。
 - **レビューボット待ちは言い訳にしない（2026-09-03 オーナー指示）**: CodeRabbit がレートリミット（review 枠切れ）なら待たずにマージへ進む。CI グリーンと、既に付いている指摘の解決が条件で、来ていないレビューを待つ理由にはしない。報告でも「待ち」を留意点として書かない。
-- **レビュー対応**: コメント取得は `gh api repos/amadeus-dlc/aidlc-deep-spec-analysis-plugin/pulls/<N>/comments`（オーナー環境では個人スキル `j5ik2o-gh-pr-review-follow-up` の `fetch_comments.py` で同じ API を叩いている）。返信は `gh api repos/.../pulls/N/comments -X POST -F in_reply_to=<数値id>`、解決は GraphQL `resolveReviewThread`。
+- **レビュー対応**: コメント取得は `gh api repos/ideo-plus/aidlc-deep-spec-analysis-plugin/pulls/<N>/comments`（オーナー環境では個人スキル `j5ik2o-gh-pr-review-follow-up` の `fetch_comments.py` で同じ API を叩いている）。返信は `gh api repos/.../pulls/N/comments -X POST -F in_reply_to=<数値id>`、解決は GraphQL `resolveReviewThread`。
 - **`gh pr view` の罠**: `headRefOid` が古いまま詰まることがある。PR の close/reopen で直る（波3で経験）。
 
 ## 未了の雑務

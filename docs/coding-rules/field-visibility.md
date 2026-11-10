@@ -1,6 +1,6 @@
 # フィールドはprivate — 判断を外へ流出させない
 
-移植元: [amadeus-ngの同名規則](https://github.com/amadeus-dlc/amadeus-ng/blob/537c4e56a838a4cb28f6564d4c0add1d4adfe915/aidlc/spaces/default/knowledge/aidlc-shared/coding-rules/field-visibility.md)。2026-09-05にTypeScriptと当該の裁定へ適用し直した版。
+移植元: [amadeus-ngの同名規則](https://github.com/ideo-plus/amadeus-ng/blob/537c4e56a838a4cb28f6564d4c0add1d4adfe915/aidlc/spaces/default/knowledge/aidlc-shared/coding-rules/field-visibility.md)。2026-09-05にTypeScriptと当該の裁定へ適用し直した版。
 
 ## 規則
 

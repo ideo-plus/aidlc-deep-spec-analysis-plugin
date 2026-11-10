@@ -1,6 +1,6 @@
 # このリポジトリの実例
 
-移植元: [amadeus-ngの同名規則](https://github.com/amadeus-dlc/amadeus-ng/blob/537c4e56a838a4cb28f6564d4c0add1d4adfe915/aidlc/spaces/default/knowledge/aidlc-shared/coding-rules/good-examples.md)。2026-09-05にTypeScriptと当該の裁定へ適用し直した版。
+移植元: [amadeus-ngの同名規則](https://github.com/ideo-plus/amadeus-ng/blob/537c4e56a838a4cb28f6564d4c0add1d4adfe915/aidlc/spaces/default/knowledge/aidlc-shared/coding-rules/good-examples.md)。2026-09-05にTypeScriptと当該の裁定へ適用し直した版。
 
 規則の根拠と、その実装を確認する入口をまとめる。各ファイルの全体を無条件の模範として扱わず、表に挙げた性質を確認する。
 
