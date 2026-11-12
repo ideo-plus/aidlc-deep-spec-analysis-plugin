@@ -1,7 +1,5 @@
 # 名前はドメインの共通言語に合わせる
 
-移植元: [amadeus-ngの同名規則](https://github.com/ideo-plus/amadeus-ng/blob/537c4e56a838a4cb28f6564d4c0add1d4adfe915/aidlc/spaces/default/knowledge/aidlc-shared/coding-rules/ubiquitous-language.md)。2026-09-05にTypeScriptと当該の裁定へ適用し直した版。
-
 ## 規則
 
 ドメインの型名・フィールド名・メソッド名は、仕様書・設計書・利用者との会話に現れる概念を表す。実装の都合だけで`Data`・`Info`・`Manager`・`Helper`などを名付けない。

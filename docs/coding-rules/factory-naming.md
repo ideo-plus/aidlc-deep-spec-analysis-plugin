@@ -1,7 +1,5 @@
 # 生成経路をコンストラクタへ集約する
 
-移植元: [amadeus-ngの同名規則](https://github.com/ideo-plus/amadeus-ng/blob/537c4e56a838a4cb28f6564d4c0add1d4adfe915/aidlc/spaces/default/knowledge/aidlc-shared/coding-rules/factory-naming.md)。2026-09-05にTypeScriptと当該の裁定へ適用し直した版。
-
 ## 基本コンストラクタ
 
 コンストラクタは`private`とし、具体的な引数型を維持する。`unknown`へ広げたり、TypeScriptが保証する型を実行時に再検査したりしない。非空・形式・値域・フィールド間の関係など、型だけでは表せない不変条件をコンストラクタで検査する。

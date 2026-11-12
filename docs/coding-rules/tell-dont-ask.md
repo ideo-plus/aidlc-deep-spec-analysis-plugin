@@ -1,7 +1,5 @@
 # Tell-Don't-Ask — 判断は状態の所有者へ
 
-移植元: [amadeus-ngの同名規則](https://github.com/ideo-plus/amadeus-ng/blob/537c4e56a838a4cb28f6564d4c0add1d4adfe915/aidlc/spaces/default/knowledge/aidlc-shared/coding-rules/tell-dont-ask.md)。2026-09-05にTypeScriptと当該の裁定へ適用し直した版。
-
 ## 原則
 
 呼び出し側が値を取り出して業務判断を再実装するより、その状態を所有する型へ判断を依頼する。getterの存在を一律に禁じる規則ではない。

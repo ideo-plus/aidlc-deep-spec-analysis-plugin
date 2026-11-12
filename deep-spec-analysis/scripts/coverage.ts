@@ -2,9 +2,6 @@
 //
 // scripts/coverage.ts — line coverage ゲート (bun test --coverage の lcov ベース)
 //
-// 参考実装: ideo-plus/amadeus-ng の scripts/coverage.sh (cargo-llvm-cov ベース)。
-// ゲート判定 (絶対 / 相対) と worktree の扱いを踏襲し、計測だけを Bun に置き換えた。
-//
 // ゲート方針:
 //   - 絶対ゲート: deep-spec-analysis の line coverage が ABSOLUTE_THRESHOLD (%) 以上で
 //     あること。しきい値は下の定数で一元管理する (bunfig.toml の coverageThreshold 0.9

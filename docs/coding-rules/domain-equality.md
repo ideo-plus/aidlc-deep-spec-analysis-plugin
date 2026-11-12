@@ -1,7 +1,5 @@
 # ドメインの同値関係を型自身が定義する
 
-移植元: [amadeus-ngの同名規則](https://github.com/ideo-plus/amadeus-ng/blob/537c4e56a838a4cb28f6564d4c0add1d4adfe915/aidlc/spaces/default/knowledge/aidlc-shared/coding-rules/domain-equality.md)。2026-09-05にTypeScriptと当該の裁定へ適用し直した版。
-
 ## 規則
 
 - 値オブジェクトの同値関係は`equals(other)`で表す。TypeScriptの`===`はオブジェクトの参照同一性であり、値の同値関係の代用にしない。

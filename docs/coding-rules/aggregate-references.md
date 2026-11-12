@@ -1,7 +1,5 @@
 # 整合性境界をまたぐ参照はIDで表す
 
-移植元: [amadeus-ngの同名規則](https://github.com/ideo-plus/amadeus-ng/blob/537c4e56a838a4cb28f6564d4c0add1d4adfe915/aidlc/spaces/default/knowledge/aidlc-shared/coding-rules/aggregate-references.md)。2026-09-05にTypeScriptと当該の裁定へ適用し直した版。
-
 ## 原則
 
 独立した整合性境界を持つ別の集約を参照するときは、そのIDを保持する。相手の現在状態を複製して、自分の正当な状態として維持しない。

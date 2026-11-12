@@ -1,7 +1,5 @@
 # infrastructureは純粋な言語基盤
 
-移植元: [amadeus-ngの同名規則](https://github.com/ideo-plus/amadeus-ng/blob/537c4e56a838a4cb28f6564d4c0add1d4adfe915/aidlc/spaces/default/knowledge/aidlc-shared/coding-rules/infrastructure-layer.md)。2026-09-05にTypeScriptと当該の裁定へ適用し直した版。
-
 ## このリポジトリの配置
 
 `kernel/infrastructure`には、ドメインや外部システムを知らない純粋な言語拡張を置く。例は`Result`、Resultの合成、JSONの型、正準化・比較などである。

@@ -1,6 +1,6 @@
 # 共有コーディング規則 — deep-spec-analysis
 
-amadeus-ngの`coding-rules`を、このTypeScriptプロジェクト向けに移植した共有ガイド。規則を種類ごとのファイルに分け、人間とエージェントが同じ入口から参照する。
+`coding-rules`を、このTypeScriptプロジェクト向けに移植した共有ガイド。規則を種類ごとのファイルに分け、人間とエージェントが同じ入口から参照する。
 
 ## 採用範囲
 
@@ -56,9 +56,8 @@ amadeus-ngの`coding-rules`を、このTypeScriptプロジェクト向けに移�
 ## 移植記録
 
 - 移植日: 2026-09-05。
-- 原本: [amadeus-ng / coding-rules](https://github.com/ideo-plus/amadeus-ng/blob/537c4e56a838a4cb28f6564d4c0add1d4adfe915/aidlc/spaces/default/knowledge/aidlc-shared/coding-rules/)。
 - 原本のコミット: `537c4e56a838a4cb28f6564d4c0add1d4adfe915`。対象ディレクトリに未コミット差分がないことを確認して取り込んだ。
-- 原本24ファイルのうち、READMEと21主題を同名の22ファイルとして移植した。原文の完全複製ではなく、採用範囲と言語・既存裁定を合わせた版である。各ファイルから原文へ辿れる。
+- 原本24ファイルのうち、READMEと21主題を同名の22ファイルとして移植した。原文の完全複製ではなく、採用範囲と言語・既存裁定を合わせた版である。
 - `cqrs-boundaries.md`は不採用のため除外した。
 - `CONSISTENCY-AUDIT-2026-08-24.md`は移植元の実装・採用済みCQRS・過去の是正状況の監査であり、当該の規範や実測として取り込まない。
 - 混在していたCQRS前提の節と参照は、Gateway・ユースケース・永続化中立性・集約参照・生成規則などから除いた。CQSは独立した規則として保持した。

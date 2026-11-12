@@ -1,7 +1,5 @@
 # 借り物の契約を自分の都合で変更しない
 
-移植元: [amadeus-ngの同名規則](https://github.com/ideo-plus/amadeus-ng/blob/537c4e56a838a4cb28f6564d4c0add1d4adfe915/aidlc/spaces/default/knowledge/aidlc-shared/coding-rules/upstream-contracts.md)。2026-09-05にTypeScriptと当該の裁定へ適用し直した版。
-
 ## 原則
 
 外部ライブラリやAI-DLC本体には、それぞれが所有する契約がある。こちらのモデルに合わないという理由だけで、相手の型・動詞・エラーの意味を変更しない。

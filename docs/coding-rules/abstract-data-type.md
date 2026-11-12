@@ -1,7 +1,5 @@
 # 抽象データ型 — 表現ではなく操作と契約で定義する
 
-移植元: [amadeus-ngの同名規則](https://github.com/ideo-plus/amadeus-ng/blob/537c4e56a838a4cb28f6564d4c0add1d4adfe915/aidlc/spaces/default/knowledge/aidlc-shared/coding-rules/abstract-data-type.md)。2026-09-05にTypeScriptと当該の裁定へ適用し直した版。
-
 ## 原則
 
 ドメインプリミティブ（DP）・値オブジェクト・エンティティは、利用者が内部表現を知らずに使える抽象データ型として設計する。フィールドをクラスで包むだけでは十分ではない。型自身が操作と不変条件を所有し、呼び出し側は公開した契約に依存する。
