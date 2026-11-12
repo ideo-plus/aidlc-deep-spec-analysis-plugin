@@ -7,7 +7,7 @@ on:
   pull_request:
 
 # 最小権限: CI は読取だけで足りる。review-thread-resolution だけがジョブ単位で
-# checks / statuses の書込みを持つ (ideo-plus/amadeus-ng の ci.yml に倣う)。
+# checks / statuses の書込みを持つ。
 permissions:
   contents: read
 
@@ -79,7 +79,7 @@ jobs:
             bun ../.cache/aidlc-workflows/core/tools/aidlc-plugin-build.ts . "$h"
           done
 
-  # line coverage ゲート (ideo-plus/amadeus-ng の coverage ジョブを Bun に移植)。
+  # line coverage ゲート。
   # scripts/coverage.ts が `bun test --coverage` の lcov から line coverage を出し、
   # 絶対ゲート (90% 床) と、pull_request では base ref に対する相対ゲート
   # (下回ったら fail) を判定する。計測対象・除外は bunfig.toml が正本。
@@ -136,7 +136,7 @@ jobs:
         if: github.event_name != 'pull_request'
         run: bun scripts/coverage.ts
 
-  # レビュースレッドのゲート (ideo-plus/amadeus-ng の ci.yml に倣う):
+  # レビュースレッドのゲート:
   # 未解決のレビュースレッド (CodeRabbit 等のボットコメントを含む) が残る PR は
   # 「CI Success」を通さない。ボットの「使用量上限で未実行」報告のような定型文は除外。
   # PR でのみ評価し、push では スキップ (CI Success 側で skipped を許容)。

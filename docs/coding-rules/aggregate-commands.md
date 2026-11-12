@@ -1,7 +1,5 @@
 # 集約のコマンドは整合性境界を守る
 
-移植元: [amadeus-ngの同名規則](https://github.com/ideo-plus/amadeus-ng/blob/537c4e56a838a4cb28f6564d4c0add1d4adfe915/aidlc/spaces/default/knowledge/aidlc-shared/coding-rules/aggregate-commands.md)。2026-09-05にTypeScriptと当該の裁定へ適用し直した版。
-
 ## 規則
 
 - 状態を変更する業務操作は集約が所有する。呼び出し側でフィールドの更新手順を組み立てない。

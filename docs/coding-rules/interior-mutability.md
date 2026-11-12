@@ -1,7 +1,5 @@
 # 可変性と所有権を隠さない
 
-移植元: [amadeus-ngの同名規則](https://github.com/ideo-plus/amadeus-ng/blob/537c4e56a838a4cb28f6564d4c0add1d4adfe915/aidlc/spaces/default/knowledge/aidlc-shared/coding-rules/interior-mutability.md)。2026-09-05にTypeScriptと当該の裁定へ適用し直した版。
-
 ## 原則
 
 シグニチャと操作の名前から、状態が変わるか予想できる設計にする。照会の裏で共有状態を書き換えたり、返した配列やMapを通じて内部状態が変わったりする構造を避ける。

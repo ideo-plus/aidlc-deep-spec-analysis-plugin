@@ -1,7 +1,5 @@
 # 内部APIに不要な互換口を残さない
 
-移植元: [amadeus-ngの同名規則](https://github.com/ideo-plus/amadeus-ng/blob/537c4e56a838a4cb28f6564d4c0add1d4adfe915/aidlc/spaces/default/knowledge/aidlc-shared/coding-rules/no-backward-compatibility.md)。2026-09-05にTypeScriptと当該の裁定へ適用し直した版。
-
 ## 規則
 
 - 内部の改名や署名変更では、呼び出し側も同時に直す。旧名のエイリアスや同じ責務の別入口を放置しない。

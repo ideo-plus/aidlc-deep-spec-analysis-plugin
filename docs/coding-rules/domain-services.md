@@ -1,7 +1,5 @@
 # ドメインサービスは最後の手段
 
-移植元: [amadeus-ngの同名規則](https://github.com/ideo-plus/amadeus-ng/blob/537c4e56a838a4cb28f6564d4c0add1d4adfe915/aidlc/spaces/default/knowledge/aidlc-shared/coding-rules/domain-services.md)。2026-09-05にTypeScriptと当該の裁定へ適用し直した版。
-
 ## 原則
 
 まず「この操作を所有する型はどれか」を考える。構築規則・導出・判断の所有者が決まるなら、その型の静的メソッドまたはインスタンスメソッドへ置く。
